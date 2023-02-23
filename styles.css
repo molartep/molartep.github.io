@@ -1,0 +1,362 @@
+body {
+    background-color: rgb(20, 20, 20);
+    margin: 0px;
+    color: white;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+p, h1, h2, h3, a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none
+}
+
+#github-link {
+    color: lightblue
+}
+
+#no-link {
+    color: #91ad66
+}
+
+#menu {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+}
+
+#menu[data-active-index="0"]>#background-pattern {
+    background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"]>#background-pattern {
+    background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"]>#background-pattern {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"]>#background-pattern {
+    background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"]>#menu-background-image {
+    background-position: center 45%;
+}
+
+#menu[data-active-index="1"]>#menu-background-image {
+    background-position: center 50%;
+}
+
+#menu[data-active-index="2"]>#menu-background-image {
+    background-position: center 55%;
+}
+
+#menu[data-active-index="3"]>#menu-background-image {
+    background-position: center 60%;
+}
+
+#background-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%,
+            transparent 9%);
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    height: 100vh;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+    width: 100vw;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#menu-background-image {
+    background-image: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/198419_hero.jpg?itok=aP5sNO_T");
+    background-position: center 40%;
+    background-size: 105vmax;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+}
+
+#about-background-image {
+    background-image: url("./images/rio-landscape.jpg");
+    background-position: center 40%;
+    background-size: 105vmax;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#projects-background-image {
+    background-image: url("./images/rio-landscape.jpg");
+    background-position: center 40%;
+    background-size: 105vmax;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#menu-items:hover~#background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#menu-items:hover~#menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+}
+
+#menu-items:hover>.menu-item {
+    opacity: 0.3;
+}
+
+#menu-items:hover>.menu-item:hover {
+    opacity: 1;
+}
+
+.menu-item {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: clamp(3rem, 8vw, 8rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+}
+
+.menu-name {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+}
+
+#button-shell {
+    margin-right: clamp(2rem, 4vw, 24rem);
+    position: relative;
+    text-align: right;
+    z-index: 2;
+}
+
+.button {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: clamp(0.5rem, 4vw, 4rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+    opacity: 0.45;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+/* 
+====================
+    About page
+====================
+*/
+
+#image-reel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    size: clamp(200px, 90%, 1000px);
+    margin-top: 2%;
+    user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-reel > img {
+width: 35vmin;
+height: 35vmin;
+object-fit: cover;
+object-position: 100% center;
+}
+
+#about {
+    margin: 5% 5% 5% 5%;
+}
+
+#contact {
+    margin: 5% 5% 5% 5%;
+}
+
+/* 
+====================
+    Projects page
+====================
+*/
+
+.hline {
+    background-color: white;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+#projects {
+    display: flex;
+    width: 95%;
+    margin-top: 3vw;
+    margin-left: 5vws;
+    overflow: auto;
+    padding-top: 3vw;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    animation:pseudoscroll;
+    animation-duration: 25s;
+    z-index: 2;
+}
+
+@keyframes pseudoscroll {
+        0%   {padding-left: 10vw; width: 90%;}
+        5%  {padding-left: 10vw; width: 90%;}
+        35% {padding-left: 5vw; width: 95%;}
+        40% {padding-left: 5vw; width: 95%;}
+        70%   {padding-left: 10vw; width: 90%;}
+        75%  {padding-left: 10vw; width: 90%;}
+        100%  {padding-left: 5vw; width: 95%;}
+    }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#projects::-webkit-scrollbar {
+    display: none;
+}
+
+.project {
+    padding: 3rem 2rem;
+    justify-content: center;
+    border-left: thick solid white;
+    margin: 0px 0px 0px 0px;
+    padding: 0px clamp(5rem, 5vw, 30rem) 0px 2rem;
+}
+
+.project > p {
+    font-size: 1.25rem;
+    line-height: 1.5;   
+    max-width: clamp(400px, 90%, 800px);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+#project-image > img {
+    height: 12vw;
+    width: 19vw;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+#project-image > a > img {
+    height: 12vw;
+    width: 19vw;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+#project-button-shell {
+    margin-right: clamp(2rem, 4vw, 24rem);
+    width: 100%;
+    position: relative;
+    text-align: justify;
+    z-index: 2;
+}
+
+.project-button {
+    color: white;
+    cursor: pointer;
+    display: block;
+    white-space: nowrap;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: clamp(0.5rem, 4vw, 4rem);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+    opacity: 0.45;
+}
+
+.project-button:hover {
+    opacity: 1;
+}
+
+#button-track {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.slide-button {
+    cursor: pointer;
+    display: block;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: clamp(5px, 105%, 40px);
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+    opacity: 0.45;
+}
+
+.slide-button:hover {
+    opacity: 1;
+}
